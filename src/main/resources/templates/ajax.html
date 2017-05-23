@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Spring Boot ajax example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link rel="stylesheet" type="text/css"
+          href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Mkyong.com</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container" style="min-height: 500px">
+
+    <div class="starter-template">
+        <h1>Spring Boot AJAX Example</h1>
+
+        <div id="feedback"></div>
+
+        <form class="form-horizontal" id="search-form">
+            <div class="form-group form-group-lg">
+                <label class="col-sm-2 control-label">Username</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="username"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" id="bth-search"
+                            class="btn btn-primary btn-lg">Search
+                    </button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</div>
+
+<div class="container">
+    <footer>
+        <p>
+            © <a href="http://www.mkyong.com">Mkyong.com</a> 2017
+        </p>
+    </footer>
+</div>
+
+<script type="text/javascript"
+        src="webjars/jquery/2.2.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/main.js"></script>
+
+<div>
+            <img id="myImage" width="100" height="100"  style="position: absolute; top: 3px; left: 3px; display:none"></img>
+            <div id="buttons">
+                <h3>Core Plugin Tests</h3>
+                <button id="deviceBtn">Device</button>
+                <button id="compassBtn">Motion</button>
+                <button id="orientationBtn">Orientation</button>
+                <button id="cameraBtn">Camera</button>
+                <button id="contactsBtn">Contacts</button>
+                <button id="geoBtn">Geolocation</button>
+                <button id="globalBtn">Globalization</button>
+                <button id="mediaBtn">Media Capture</button>
+                <button id="networkBtn">Network Info</button>
+                <button id="browserBtn">InAppBrowser</button>
+                <button id="statusbarBtn">Statusbar</button>
+                <button id="splashscreenBtn">SplashScreen</button>
+                <button id="vibrateBtn">Vibration</button>
+                <button id="filetransferBtn">File Transfer</button>
+                <button id="fileBtn">File</button>
+            </div>
+            <div class="scroll">
+                <textarea id="log" readonly="readonly"></textarea>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
